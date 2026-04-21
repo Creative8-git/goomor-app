@@ -29,7 +29,7 @@ const customFlashing = require('./Data/Flashing/CustomFlashing'); // Import Cust
 const standardFlashingDetail = require('./Data/StandardFlashingDetail');
 const customFlashingDetail = require('./Data/CustomFlashingDetail');
 
-const allowedOrigins = ['http://localhost:3000','https://goomor-frontend.onrender.com'];
+const allowedOrigins = ['http://localhost:3000','https://goomor-frontend.onrender.com','https://goomor-frontend.vercel.app'];
  const corsOptions = {
   origin: allowedOrigins,
   credentials: true,
