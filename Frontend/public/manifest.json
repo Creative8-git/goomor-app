@@ -1,0 +1,21 @@
+{
+    "short_name": "Goomor Alybeam",
+    "name": "Goomor Alybeam",
+    "icons": [
+      {
+        "src": "/images/logo_transparent_mobilescreen.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/logo_transparent_mobilescreen.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }
+  

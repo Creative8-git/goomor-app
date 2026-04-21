@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+    # Optional: add Backend/.env for Supabase etc.
+    # env_file:
+    #   - ./Backend/.env
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+      args:
+        # URL the browser uses for API and assets (same machine: backend port)
+        REACT_APP_API_URL: http://localhost:5000
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

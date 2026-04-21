@@ -1,0 +1,331 @@
+.product-name {
+    font-weight: bold;
+    color: #00234b;
+    text-align: left;
+    font-weight: bolder;
+    font-size: xx-large;
+  }
+  .product-specs {
+    font-size: 1rem;
+    color: #001A57;
+  }
+  .product-specs h6 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .product-specs a {
+    text-decoration: none;
+    color: #00234b;
+
+  }
+  .product-specs a:hover {
+    text-decoration: underline;
+  }
+  .btn-secondary {
+    background-color: #001A57;
+  }
+  .color-picker-container {
+    margin-top: 1rem;
+  }
+  .color-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+  }
+  .color-preview {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+  }
+  .color-name {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* custom css for component carousel */
+
+  /* standalone-carousel.css */
+  .carousel-custom-container {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-custom-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-custom-item {
+    min-width: 100%;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    max-width: 100%;
+    max-height: 400px; /* Set a consistent height for the carousel */
+    object-fit: cover; /* Ensures images are scaled and cropped appropriately */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .carousel-custom-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .carousel-custom-button-prev {
+    left: 10px;
+  }
+  
+  .carousel-custom-button-next {
+    right: 10px;
+  }
+  
+  .carousel-custom-dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .carousel-custom-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: gray;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .carousel-custom-dot.active {
+    background-color: black;
+  }
+  
+
+  /* Versiclad */
+  .versiclad .product-name {
+    color: #233D36 !important; 
+  }
+  .versiclad .product-specs {
+    color: #233D36 !important; 
+  }
+  .versiclad .product-specs a {
+    color: #233D36 !important; 
+  }
+  .versiclad .product-specs a:hover {
+    color: #233D36 !important; 
+  }
+  /* .versiclad .btn-secondary {
+    background-color: #233D36 !important;
+  }       
+  .versiclad .btn-primary {
+    background-color: #233D36 !important;
+  } */
+  .versiclad h3 {
+    color: #233D36 !important; 
+  }
+
+  /* Metroll */
+  .Metroll .product-name {
+    color: #00656B !important; 
+  }
+  .Metroll .product-specs {
+    color: #00656B !important; 
+  }
+  .Metroll .product-specs a {
+    color: #00656B !important; 
+  }
+  .Metroll .product-specs a:hover {
+    color: #00656B !important; 
+  }
+  /* .Metroll .btn-secondary {
+    background-color: #00656B !important;
+  }   
+  .Metroll .btn-primary {
+    background-color: #00656B !important;
+  } */
+  .Metroll h3 {
+    color: #00656B !important; 
+  }
+
+  /* Lysaght */
+  .Lysaght .product-name {
+    color: #026bb5 !important; 
+  }
+  .Lysaght .product-specs {
+    color: #026bb5 !important; 
+  }
+  .Lysaght .product-specs a {
+    color: #026bb5 !important; 
+  }
+  .Lysaght .product-specs a:hover {
+    color: #026bb5 !important; 
+  }
+  /* .Lysaght .btn-secondary {
+    background-color: #026bb5 !important;
+  }       
+  .Lysaght .btn-primary {
+    background-color: #026bb5 !important;
+  } */
+  .Lysaght h3 {
+    color: #026bb5 !important; 
+  }
+
+  /* Stramit */
+  .Stramit .product-name {
+    color: #ef3e33 !important; 
+  }
+  .Stramit .product-specs {
+    color: #ef3e33 !important; 
+  }
+  .Stramit .product-specs a {
+    color: #ef3e33 !important; 
+  }
+  .Stramit .product-specs a:hover {
+    color: #ef3e33 !important; 
+  }
+  /* .Stramit .btn-secondary {
+    background-color: #ef3e33 !important;
+  }       
+  .Stramit .btn-primary {
+    background-color: #ef3e33 !important;
+  } */
+  .Stramit h3 {
+    color: #ef3e33 !important; 
+  }
+
+  /* StratCo */
+  .StratCo .product-name {
+    color: #c4122e !important; 
+  }
+  .StratCo .product-specs {
+    color: #c4122e !important; 
+  }
+  .StratCo .product-specs a {
+    color: #c4122e !important; 
+  }
+  .StratCo .product-specs a:hover {
+    color: #c4122e !important; 
+  }
+  /* .StratCo .btn-secondary {
+    background-color: #c4122e !important;
+  }       
+  .StratCo .btn-primary {
+    background-color: #c4122e !important;
+  } */
+  .StratCo h3 {
+    color: #c4122e !important; 
+  } 
+  
+.Palram .product-name {
+  color: #C1D72E !important; 
+}
+.Palram .product-specs {
+  color: #C1D72E !important; 
+}
+.Palram .product-specs a {
+  color: #C1D72E !important; 
+}
+.Palram .product-specs a:hover {
+  color: #C1D72E !important; 
+}
+/* .Palram .btn-secondary {
+  background-color: #C1D72E !important;
+}       
+.Palram .btn-primary {
+  background-color: #C1D72E !important;
+} */
+.Palram h3 {
+  color: #C1D72E !important; 
+}
+
+  /* LaserLite */
+  .LaserLite .product-name {
+    color: #001689 !important; 
+  }
+  .LaserLite .product-specs {
+    color: #001689 !important; 
+  }
+  .LaserLite .product-specs a {
+    color: #001689 !important; 
+  }
+  .LaserLite .product-specs a:hover {
+    color: #001689 !important; 
+  }
+  /* .LaserLite .btn-secondary {
+    background-color: #001689 !important;
+  }       
+  .LaserLite .btn-primary {
+    background-color: #001689 !important;
+  }  */
+  .LaserLite h3 {
+    color: #001689 !important; 
+  } 
+
+  /* AmpeLite */
+  .AmpeLite .product-name {
+    color: #71979c !important; 
+  }
+  .AmpeLite .product-specs {
+    color: #71979c !important; 
+  }
+  .AmpeLite .product-specs a {
+    color: #71979c !important; 
+  }
+  .AmpeLite .product-specs a:hover {
+    color: #71979c !important; 
+  }
+  /* .AmpeLite .btn-secondary {
+    background-color: #71979c !important;
+  }       
+  .AmpeLite .btn-primary {
+    background-color: #71979c !important;
+  } */
+  .AmpeLite h3 {
+    color: #71979c !important; 
+  }
+
+  /* Bondor */
+  .Bondor .product-name {
+    color: #004062 !important; 
+  }
+  .Bondor .product-specs {
+    color: #004062 !important; 
+  }
+  .Bondor .product-specs a {
+    color: #004062 !important; 
+  } 
+  .Bondor .product-specs a:hover {
+    color: #004062 !important; 
+  }
+  /* .Bondor .btn-secondary {
+    background-color: #004062 !important;
+  }       
+  .Bondor .btn-primary {
+    background-color: #004062 !important;
+  } */
+  .Bondor h3 {
+    color: #004062 !important; 
+  }        
+
+
+

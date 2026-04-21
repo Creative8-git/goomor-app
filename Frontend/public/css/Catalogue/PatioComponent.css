@@ -1,0 +1,140 @@
+.patio-hero {
+    background: url('https://images.unsplash.com/photo-1674672670977-bcf517fc2376?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    animation: patio-fadeIn 2s ease-in-out;
+}
+
+.patio-hero h1 {
+    font-size: 3rem;
+    color: #f0f0f0;
+}
+
+
+
+@keyframes patio-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.patio-section {
+    padding: 2rem;
+    animation: patio-slideInUp 1s ease-in-out;
+}
+
+.patio-section h2{
+    color: #df5e17 !important;
+}
+
+@keyframes patio-slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.patio-section-title  {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    animation: patio-fadeIn 1.5s ease-in-out;
+}
+
+.patio-content {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    color: #555;
+}
+
+.patio-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patio-content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.patio-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.patio-feature {
+    flex: 1 1 calc(30% - 2rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.patio-feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.patio-feature h3 {
+    font-size: 1.5rem;
+    color: #006400;
+}
+
+
+.gallery-carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.thumbnail-item {
+    border: 2px solid transparent;
+    transition: border 0.3s ease, transform 0.3s ease;
+    cursor: pointer; /* Add pointer cursor */
+}
+
+.thumbnail-item img {
+    height: 100px; /* Limit height */
+    object-fit: cover; /* Prevent distortion */
+    width: auto; /* Maintain responsiveness */
+}
+
+
+.thumbnail-item.active {
+    border-color: #007bff;
+    transform: scale(1.1);
+}
+
+.thumbnail-item:hover {
+    border-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Ensure the gallery main image stays contained */
+.gallery-carousel-main {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+    overflow: hidden;
+     /* Optional fallback background */
+}
+
+.gallery-main-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image fits within its container */
+     /* Prevent transparency issues */
+}

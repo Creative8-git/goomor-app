@@ -1,0 +1,36 @@
+/* Base styles for shared elements */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  input,
+  button {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  input {
+    border: 1px solid #ddd;
+  }
+  
+  button {
+    border: none;
+    cursor: pointer;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  

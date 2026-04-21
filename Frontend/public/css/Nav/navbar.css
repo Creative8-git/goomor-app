@@ -1,0 +1,207 @@
+/* Main dropdown menu styling */
+.nav-item .dropdown-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  border: none;
+}
+
+/* Show main dropdown menu when the show class is applied */
+.nav-item .dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Enable interaction for visible menus */
+  padding: 0;
+  margin: 0;
+  height: auto;
+  overflow: visible;
+}
+
+/* Submenu positioning */
+.dropdown-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Show submenu when the show class is applied */
+.dropdown-menu .dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  padding: 0;
+  height: auto;
+  overflow: visible;
+}
+
+/* Dropdown item styles */
+.dropdown-item {
+  margin: 0;
+  padding: 8px 16px;
+  line-height: normal;
+  display: block;
+  color: #555;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.navbar .dropdown-toggle {
+   /* Force this style to override others */
+  padding: 10px 5px;
+  margin-bottom: 0;
+}
+
+
+/* Dropdown toggle arrow */
+.dropdown-toggle::after {
+  margin-left: 0.5em;
+  vertical-align: middle;
+}
+
+/* Active dropdown item */
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  /* background: transparent; */
+  transition: .5s;
+}
+
+@media (max-width: 992px) {
+  /* Ensure dropdown menus stack vertically on mobile */
+  .navbar .nav-item .dropdown-menu {
+    margin: 0 !important; /* Force no margins */
+    padding: 0 !important; /* Force no padding */
+    border: none; /* Remove any borders */
+  }
+
+  /* Adjust nav items and links */
+  .navbar .nav-item,
+  .navbar .nav-link {
+    margin: 0 !important;
+    padding: 8px 16px !important;
+    border: none;
+  }
+
+  /* Remove any spacing from dropdowns */
+  .dropdown, 
+  .dropdown-menu,
+  .dropdown-item {
+    margin: 0 !important;
+    padding: 8px 16px !important;
+    border: none;
+  }
+
+  /* Ensure submenus don't have extra spacing */
+  .dropdown-menu .dropdown-menu {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .navbar .nav-item .dropdown-menu {
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    position: static;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .navbar .nav-item .dropdown-menu.show {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+  }
+  .navbar .nav-item .dropdown-menu.show .nav-item {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Submenu adjustments for mobile */
+  .dropdown-menu .dropdown-menu {
+    position: static;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+  }
+
+  /* Adjust dropdown items for better spacing */
+  .dropdown-item {
+    width: auto; /* Full width on mobile */
+    text-align: left;
+    padding: 8px 16px;
+    margin: 0;
+  }
+
+  /* Adjust nav-link spacing */
+  .navbar .nav-link {
+    padding: 12px;
+  }
+
+  /* Adjust submenu spacing */
+  .dropdown-menu {
+    margin-top: 0;
+  }
+
+  .navbar .dropdown-toggle {
+    padding: 8px 16px;
+  }
+
+  .dropdown, .dropdown-menu {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Main Dropdown Hover */
+.nav-item:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Submenu Hover */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+

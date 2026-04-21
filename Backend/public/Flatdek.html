@@ -1,0 +1,184 @@
+import React, { useEffect } from "react";
+import "./Flatdek.css"; // Add CSS in a separate file for custom styling
+
+const Flatdek = () => {
+  useEffect(() => {
+    const colors = [
+      { name: "Dover White", hex: "#F9FBF1" },
+      { name: "Surfmist", hex: "#E4E2D5" },
+      { name: "Evening Haze", hex: "#C5C2AA" },
+      { name: "Classic Cream", hex: "#E9DCB8" },
+      { name: "Paperbark", hex: "#CABFA4" },
+      { name: "Dune", hex: "#B1ADA3" },
+      { name: "Southerly", hex: "#D2D1CB" },
+      { name: "Shale Grey", hex: "#BDBFBA" },
+      { name: "Bluegum", hex: "#969799" },
+      { name: "Windspray", hex: "#888B8A" },
+      { name: "Gully", hex: "#857E73" },
+      { name: "Jasper", hex: "#6C6153" },
+      { name: "Wallaby", hex: "#7F7C78" },
+      { name: "Basalt", hex: "#6D6C6E" },
+      { name: "Woodland Grey", hex: "#4B4C46" },
+      { name: "Monument", hex: "#323233" },
+      { name: "Night Sky", hex: "#000000" },
+      { name: "Ironstone", hex: "#3E434C" },
+      { name: "Deep Ocean", hex: "#364152" },
+      { name: "Cottage Green", hex: "#304C3C" },
+      { name: "Pale Eucalypt", hex: "#7C846A" },
+      { name: "Manor Red", hex: "#5E1D0E" },
+    ];
+
+    const colorPicker = document.getElementById("colorPicker");
+    const colorPreview = document.getElementById("colorPreview");
+    const colorName = document.getElementById("colorName");
+
+    colors.forEach((color) => {
+      const colorBox = document.createElement("div");
+      colorBox.className = "color-box";
+      colorBox.style.backgroundColor = color.hex;
+      colorBox.addEventListener("click", () => {
+        colorPreview.style.backgroundColor = color.hex;
+        colorName.textContent = color.name;
+      });
+      colorPicker.appendChild(colorBox);
+    });
+  }, []);
+
+  return (
+    <div className="container mt-5">
+      <div className="row">
+        {/* Image Gallery Carousel */}
+        <div className="col-md-6 p-3">
+          <div
+            id="flatdekCarousel"
+            className="flatdek-carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div className="flatdek-carousel-inner">
+              <div className="flatdek-carousel-item active">
+                <img
+                  src="https://goomorproductimage.s3.ap-southeast-2.amazonaws.com/Lysaght/Flatdek/Flatdek_1.jpg"
+                  className="d-block w-100"
+                  alt="Flatdek Image 1"
+                />
+              </div>
+              <div className="flatdek-carousel-item">
+                <img
+                  src="https://goomorproductimage.s3.ap-southeast-2.amazonaws.com/Lysaght/Flatdek/Flatdek_2.jpg"
+                  className="d-block w-100"
+                  alt="Flatdek Image 2"
+                />
+              </div>
+              <div className="flatdek-carousel-item">
+                <img
+                  src="https://goomorproductimage.s3.ap-southeast-2.amazonaws.com/Lysaght/Flatdek/Flatdek_3.jpg"
+                  className="d-block w-100"
+                  alt="Flatdek Image 3"
+                />
+              </div>
+            </div>
+            <button
+              className="flatdek-carousel-control-prev"
+              type="button"
+              data-bs-target="#flatdekCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                className="flatdek-carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button
+              className="flatdek-carousel-control-next"
+              type="button"
+              data-bs-target="#flatdekCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                className="flatdek-carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span className="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Product Information */}
+        <div className="col-md-6">
+          <h1 className="product-name">FLATDEK®</h1>
+          <div className="mt-4">
+            <h3>Features</h3>
+            <ul>
+              <li>Durable and lightweight</li>
+              <li>Low-maintenance</li>
+              <li>Perfect for outdoor and indoor applications</li>
+            </ul>
+          </div>
+          <div className="mt-4">
+            <h3>Product Information</h3>
+            <p>
+              Lysaght Flatdek is an advanced roofing and walling solution that
+              combines durability with a sleek modern look. It is ideal for
+              applications requiring both strength and aesthetic appeal.
+            </p>
+            <div className="mt-4">
+              <a
+                href="https://cdn.dcs.lysaght.com/download/flatdek-design-and-installation-guide"
+                className="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Specifications and Color Picker */}
+        <div className="col-md-6">
+          <h3>Specifications</h3>
+          <div className="row product-specs">
+            <div className="col-md-6">
+              <h6>Nominal Cover Width:</h6>
+              <p>250mm</p>
+            </div>
+            <div className="col-md-6">
+              <h6>Nominal Rib Height:</h6>
+              <p>45mm</p>
+            </div>
+            <div className="col-md-6">
+              <h6>Minimum Roof Slope:</h6>
+              <p>2°</p>
+            </div>
+            <div className="col-md-6">
+              <h6>Suitable For:</h6>
+              <p>Roofing</p>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6">
+          <div className="color-picker-container">
+            <div className="row">
+              <div className="col-sm-6">
+                <h3>Select a Color</h3>
+                <div className="color-picker" id="colorPicker"></div>
+              </div>
+              <div className="col-sm-6">
+                <div
+                  className="color-preview mx-auto"
+                  id="colorPreview"
+                ></div>
+                <p className="color-name" id="colorName">
+                  Select a color
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Flatdek;
